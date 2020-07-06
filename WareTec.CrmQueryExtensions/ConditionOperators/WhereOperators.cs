@@ -64,6 +64,18 @@ namespace WareTec.CrmQueryExtensions
             return query;
         }
 
+        public static QueryExpression WhereContainValues(this QueryExpression query, string attribute, params object[] values)
+        {
+            if (query.Criteria == null)
+            {
+                query.Criteria = new FilterExpression();
+            }
+
+            query.Criteria.AddCondition(attribute, ConditionOperator.ContainValues, values);
+
+            return query;
+        }
+
         public static QueryExpression Where(this QueryExpression query, string attribute, ConditionOperator conditionOperator,
             params object[] values)
         {
