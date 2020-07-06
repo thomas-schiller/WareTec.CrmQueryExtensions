@@ -1,20 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net462;net47;net472</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>WareTec.CrmQueryExtensions</PackageId>
     <Authors>Thomas Schiller</Authors>
     <Company>WareTec IT Solutions GmbH</Company>
     <Product>WareTec.CrmQueryExtensions</Product>
     <Description>Small library for creating crm query expressions faster with less code.</Description>
-    <Copyright>Copyright (c) 2020</Copyright>
+    <Copyright>Copyright © 2020</Copyright>
     <PackageProjectUrl>https://github.com/waretec/WareTec.CrmQueryExtensions</PackageProjectUrl>
     <PackageIcon>WareTec_Dynamics.png</PackageIcon>
     <RepositoryUrl>https://github.com/waretec/WareTec.CrmQueryExtensions</RepositoryUrl>
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <FileVersion>1.0.0.1</FileVersion>
     <Version>1.0.1</Version>
+    <PackageTags>Dynamics, CRM, 365</PackageTags>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +25,10 @@
 
   <ItemGroup>
     <None Include="..\..\..\..\..\..\..\OneDrive - WareTec\CI\WareTec_Dynamics.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="license.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
