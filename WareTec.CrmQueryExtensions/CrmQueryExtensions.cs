@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
@@ -11,7 +9,7 @@ namespace WareTec.CrmQueryExtensions
 {
     public static partial class CrmQueryExtensions
     {
-     
+
         public static QueryExpression Select(this QueryExpression query, params string[] attributes)
         {
             query.ColumnSet = new ColumnSet(attributes);
