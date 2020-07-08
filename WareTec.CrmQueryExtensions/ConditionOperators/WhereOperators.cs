@@ -2,7 +2,7 @@
 
 namespace WareTec.CrmQueryExtensions
 {
-    public static partial class CrmQueryExtensions
+    public static partial class WhereExtensions
     {
        
         public static QueryExpression WhereAbove(this QueryExpression query, string attribute, params object[] values)

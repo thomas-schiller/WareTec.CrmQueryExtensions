@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xrm.Sdk.Query;
 
-namespace WareTec.CrmQueryExtensions.ConditionOperators
+namespace WareTec.CrmQueryExtensions
 {
-    public static partial class CrmQueryExtensions
+    public static partial class WhereExtensions
     {
         /// <summary>
         /// Adds query expressions with ConditionOperator.GreaterEqual
