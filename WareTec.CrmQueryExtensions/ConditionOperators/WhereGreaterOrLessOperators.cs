@@ -136,7 +136,7 @@ namespace WareTec.CrmQueryExtensions
                 query.Criteria = new FilterExpression();
             }
 
-            query.Criteria.AddCondition(attribute, ConditionOperator.GreaterThan, value);
+            query.Criteria.AddCondition(attribute, ConditionOperator.LessThan, value);
 
             return query;
         }

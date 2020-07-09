@@ -57,7 +57,7 @@ namespace WareTec.CrmQueryExtensions
                 query.Criteria = new FilterExpression();
             }
 
-            query.Criteria.AddCondition(attribute, ConditionOperator.Equal, values);
+            query.Criteria.AddCondition(attribute, ConditionOperator.NotEqual, values);
 
             return query;
         }
@@ -77,7 +77,7 @@ namespace WareTec.CrmQueryExtensions
                 query.Criteria = new FilterExpression();
             }
 
-            query.Criteria.AddCondition(attribute, ConditionOperator.Equal, value);
+            query.Criteria.AddCondition(attribute, ConditionOperator.NotEqual, value);
 
             return query;
         }
