@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WareTec.CrmQueryExtensions</name>
+    </assembly>
+    <members>
+        <member name="M:WareTec.CrmQueryExtensions.ConcatExtensions.And(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.Query.FilterExpression)">
+            <summary>
+            Adds AND concatenated sub-query
+            </summary>
+            <param name="query"></param>
+            <param name="subQuery">subQuery of type FilterExpressions</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ConcatExtensions.And(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.Query.ConditionExpression)">
+            <summary>
+            Adds AND concatenated sub-query
+            </summary>
+            <param name="query"></param>
+            <param name="subQuery">subQuery of type ConditionExpression</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ConcatExtensions.And(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,Microsoft.Xrm.Sdk.Query.ConditionOperator,System.Object)">
+            <summary>
+            Adds AND concatenated sub-query
+            </summary>
+            <param name="query"></param>
+            <param name="attributeName">Attribute name of compared field</param>
+            <param name="conditionOperator">Condition operator</param>
+            <param name="compareValue">Value that is compared with CRM value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ConcatExtensions.Or(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.Query.FilterExpression)">
+            <summary>
+            Adds OR concatenated sub-query
+            </summary>
+            <param name="query"></param>
+            <param name="subQuery">subQuery of type FilterExpression</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ConcatExtensions.Or(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.Query.ConditionExpression)">
+            <summary>
+            Adds OR concatenated sub-query
+            </summary>
+            <param name="query"></param>
+            <param name="subQuery">subQuery of type ConditionExpression</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ConcatExtensions.Or(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,Microsoft.Xrm.Sdk.Query.ConditionOperator,System.Object)">
+            <summary>
+            Adds OR concatenated sub-query
+            </summary>
+            <param name="query"></param>
+            <param name="attributeName">Attribute name of compared field</param>
+            <param name="conditionOperator">Condition operator</param>
+            <param name="compareValue">Value that is compared with CRM value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereEqual(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,System.Object[])">
+            <summary>
+            Adds query expressions with ConditionOperator.Equal
+            </summary>
+            <param name="query">Extended query</param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="values">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereEqual``1(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,``0)">
+            <summary>
+            Adds query expressions with ConditionOperator.Equal
+            </summary>
+            <typeparam name="TIn">Type of attribute comparison value</typeparam>
+            <param name="query"></param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="value">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereNotEqual(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,System.Object[])">
+            <summary>
+            Adds query expressions with ConditionOperator.NotEqual
+            </summary>
+            <param name="query">Extended query</param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="values">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereNotEqual``1(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,``0)">
+            <summary>
+            Adds query expressions with ConditionOperator.NotEqual
+            </summary>
+            <typeparam name="TIn">Type of attribute comparison value</typeparam>
+            <param name="query"></param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="value">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereGreaterEqual(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,System.Object[])">
+            <summary>
+            Adds query expressions with ConditionOperator.GreaterEqual
+            </summary>
+            <param name="query">Extended query</param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="value">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereGreaterEqual``1(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,``0)">
+            <summary>
+            Adds query expressions with ConditionOperator.GreaterEqual
+            </summary>
+            <typeparam name="TIn">Type of attribute comparison value</typeparam>
+            <param name="query">Extended query</param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="value">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereGreaterThan``1(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,``0)">
+            <summary>
+            Adds query expressions with ConditionOperator.GreaterThan
+            </summary>
+            <typeparam name="TIn">Type of attribute comparison value</typeparam>
+            <param name="query">Extended query</param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="value">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereGreaterThan(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,System.Object[])">
+            <summary>
+            Adds query expressions with ConditionOperator.GreaterThan
+            </summary>
+            <param name="query">Extended query</param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="value">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereLessEqual(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,System.Object[])">
+            <summary>
+            Adds query expressions with ConditionOperator.LessEqual
+            </summary>
+            <param name="query">Extended query</param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="value">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereLessEqual``1(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,``0)">
+            <summary>
+            Adds query expressions with ConditionOperator.LessEqual
+            </summary>
+            <typeparam name="TIn">Type of attribute comparison value</typeparam>
+            <param name="query">Extended query</param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="value">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereLessThan``1(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,``0)">
+            <summary>
+            Adds query expressions with ConditionOperator.LessThan
+            </summary>
+            <typeparam name="TIn">Type of attribute comparison value</typeparam>
+            <param name="query">Extended query</param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="value">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.WhereExtensions.WhereLessThan(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,System.Object[])">
+            <summary>
+            Adds query expressions with ConditionOperator.LessThan
+            </summary>
+            <param name="query">Extended query</param>
+            <param name="attribute">Attribute name of compared entity</param>
+            <param name="value">Comparison value</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ResultExtensions.ToList(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.IOrganizationService,System.Int32)">
+            <summary>
+            Executes query expression and returns flattened paged entity list.
+            </summary>
+            <param name="query"></param>
+            <param name="service">CRM organization service</param>
+            <param name="pageCount">Number of page-size. Default: 1000</param>
+            <returns>Flattened paged entity list.</returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ResultExtensions.ToList``1(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.IOrganizationService,System.Int32)">
+            <summary>
+            Executes query expression and returns flattened paged typed entity list.
+            </summary>
+            <typeparam name="T">Type of entity e.g. account</typeparam>
+            <param name="query"></param>
+            <param name="service">CRM organization service</param>
+            <param name="pageCount">Number of page-size. Default: 1000</param>
+            <returns>Flattened paged entity list.</returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ResultExtensions.ById(Microsoft.Xrm.Sdk.Query.QueryExpression,System.Guid,Microsoft.Xrm.Sdk.IOrganizationService)">
+            <summary>
+            Returns single entity by Id.
+            </summary>
+            <param name="query"></param>
+            <param name="id">Id of queried entity</param>
+            <param name="service">CRM organization service</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ResultExtensions.ById``1(Microsoft.Xrm.Sdk.Query.QueryExpression,System.Guid,Microsoft.Xrm.Sdk.IOrganizationService)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T">Concrete entity type. E.g. account</typeparam>
+            <param name="query"></param>
+            <param name="id">Id of queried entity</param>
+            <param name="service">CRM organization service</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ResultExtensions.FirstOrDefault(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.IOrganizationService)">
+            <summary>
+            Returns the first entity that is found. If no entity is found, null will be returned.
+            </summary>
+            <param name="query"></param>
+            <param name="service">CRM organization service</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ResultExtensions.FirstOrDefault``1(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.IOrganizationService)">
+            <summary>
+             Returns the first entity that is found. If no entity is found, null will be returned.
+            </summary>
+            <param name="query"></param>
+            <param name="service">CRM organization service</param>
+            <typeparam name="T">Type of derived proxy class.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ResultExtensions.First(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.IOrganizationService)">
+            <summary>
+            Returns the first entity that is found. If no entity is found, an exception will be thrown.
+            </summary>
+            <param name="query"></param>
+            <param name="service">CRM organization service</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ResultExtensions.First``1(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.IOrganizationService)">
+            <summary>
+            Returns the first entity that is found. If no entity is found, an exception will be thrown.
+            </summary>
+            <param name="query"></param>
+            <param name="service">CRM organization service</param>
+            <typeparam name="T">Type of derived proxy class.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.CrmQueryExtensions.Select(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String[])">
+            <summary>
+            Sets the column that should be fetched.
+            </summary>
+            <param name="query"></param>
+            <param name="attributes">Comma separated list of attributes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.CrmQueryExtensions.SelectAll(Microsoft.Xrm.Sdk.Query.QueryExpression)">
+            <summary>
+            Fetches ALL columns! Just do it if you know what mass of data you are fetching for.
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
