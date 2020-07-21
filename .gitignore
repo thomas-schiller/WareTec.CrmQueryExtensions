@@ -338,3 +338,6 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/WareTec.CrmQueryExtensions.xrmsuo
+/WareTec.CrmQueryExtensions.xrmcache
+/WareTec.CrmQueryExtensions.xrm

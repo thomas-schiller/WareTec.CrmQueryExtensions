@@ -117,5 +117,57 @@ namespace WareTec.CrmQueryExtensions
         {
             return service.Retrieve(query.EntityName, id, query.ColumnSet).ToEntity<T>();
         }
+
+        /// <summary>
+        /// Returns the first entity that is found. If no entity is found, null will be returned.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="service">CRM organization service</param>
+        /// <returns></returns>
+        public static Entity FirstOrDefault(this QueryExpression query, IOrganizationService service)
+        {
+            var entityCollection = service.RetrieveMultiple(query);
+            return entityCollection.Entities.Count > 0 ? entityCollection.Entities[0] : null;
+        }
+
+        /// <summary>
+        ///  Returns the first entity that is found. If no entity is found, null will be returned.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="service">CRM organization service</param>
+        /// <typeparam name="T">Type of derived proxy class.</typeparam>
+        /// <returns></returns>
+        public static T FirstOrDefault<T>(this QueryExpression query, IOrganizationService service) where T : Entity
+        {
+            var entityCollection = service.RetrieveMultiple(query);
+            return entityCollection.Entities.Count > 0 ? entityCollection.Entities[0].ToEntity<T>() : null;
+        }
+
+        /// <summary>
+        /// Returns the first entity that is found. If no entity is found, an exception will be thrown.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="service">CRM organization service</param>
+        /// <returns></returns>
+        public static Entity First(this QueryExpression query, IOrganizationService service)
+        {
+            var entityCollection = service.RetrieveMultiple(query);
+            return entityCollection.Entities.Count > 0 ? entityCollection.Entities[0] : throw new Exception("No entity with the given criteria was found!");
+        }
+
+        /// <summary>
+        /// Returns the first entity that is found. If no entity is found, an exception will be thrown.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="service">CRM organization service</param>
+        /// <typeparam name="T">Type of derived proxy class.</typeparam>
+        /// <returns></returns>
+        public static T First<T>(this QueryExpression query, IOrganizationService service) where T : Entity
+        {
+            var entityCollection = service.RetrieveMultiple(query);
+            return entityCollection.Entities.Count > 0 ? entityCollection.Entities[0].ToEntity<T>() : throw new Exception("No entity with the given criteria was found!");
+        }
+
+
     }
 }
