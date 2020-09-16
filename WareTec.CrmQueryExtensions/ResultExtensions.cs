@@ -168,6 +168,46 @@ namespace WareTec.CrmQueryExtensions
             return entityCollection.Entities.Count > 0 ? entityCollection.Entities[0].ToEntity<T>() : throw new Exception("No entity with the given criteria was found!");
         }
 
+        /// <summary>
+        /// Returns the only entity that is found. If more than one entity is found an exception will be thrown.
+        /// </summary>
+        /// <param name="query">CRM organization service</param>
+        /// <param name="service"></param>
+        /// <returns></returns>
+        public static Entity Single(this QueryExpression query, IOrganizationService service)
+        {
+            var result = service.RetrieveMultiple(query);
+
+            if (!result.Entities.Any()) return null;
+            if (result.Entities.Count > 1)
+            {
+                throw new ApplicationException("More than 1 entity was found with the given criteria.");
+            }
+
+            return result.Entities.First();
+
+        }
+
+        /// <summary>
+        /// Returns the only entity that is found. If more than one entity is found an exception will be thrown.
+        /// </summary>
+        /// <param name="query">CRM organization service</param>
+        /// <param name="service"></param>
+        /// <typeparam name="T">Type of derived proxy class.</typeparam>
+        /// <returns></returns>
+        public static T Single<T>(this QueryExpression query, IOrganizationService service) where T : Entity
+        {
+            var result = service.RetrieveMultiple(query);
+
+            if (!result.Entities.Any()) return null;
+            if (result.Entities.Count > 1)
+            {
+                throw new ApplicationException("More than 1 entity was found with the given criteria.");
+            }
+
+            return result.Entities[0].ToEntity<T>();
+
+        }
 
     }
 }
