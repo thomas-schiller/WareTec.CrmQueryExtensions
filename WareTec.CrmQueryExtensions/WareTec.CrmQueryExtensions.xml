@@ -170,6 +170,15 @@
             <param name="value">Comparison value</param>
             <returns></returns>
         </member>
+        <member name="M:WareTec.CrmQueryExtensions.OrderExtensions.OrderBy(Microsoft.Xrm.Sdk.Query.QueryExpression,System.String,Microsoft.Xrm.Sdk.Query.OrderType)">
+            <summary>
+            Adds ordering to query expression.
+            </summary>
+            <param name="query"></param>
+            <param name="attribute">Attribute name which is used for ordering.</param>
+            <param name="orderType">Ascending or descending ordering.</param>
+            <returns></returns>
+        </member>
         <member name="M:WareTec.CrmQueryExtensions.ResultExtensions.ToList(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.IOrganizationService,System.Int32)">
             <summary>
             Executes query expression and returns flattened paged entity list.
@@ -239,6 +248,23 @@
             </summary>
             <param name="query"></param>
             <param name="service">CRM organization service</param>
+            <typeparam name="T">Type of derived proxy class.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ResultExtensions.Single(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.IOrganizationService)">
+            <summary>
+            Returns the only entity that is found. If more than one entity is found an exception will be thrown.
+            </summary>
+            <param name="query">CRM organization service</param>
+            <param name="service"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WareTec.CrmQueryExtensions.ResultExtensions.Single``1(Microsoft.Xrm.Sdk.Query.QueryExpression,Microsoft.Xrm.Sdk.IOrganizationService)">
+            <summary>
+            Returns the only entity that is found. If more than one entity is found an exception will be thrown.
+            </summary>
+            <param name="query">CRM organization service</param>
+            <param name="service"></param>
             <typeparam name="T">Type of derived proxy class.</typeparam>
             <returns></returns>
         </member>

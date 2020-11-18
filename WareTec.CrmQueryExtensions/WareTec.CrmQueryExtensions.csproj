@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/waretec/WareTec.CrmQueryExtensions</RepositoryUrl>
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
     <PackageTags>Dynamics, CRM, 365</PackageTags>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
     <RepositoryType>git</RepositoryType>
